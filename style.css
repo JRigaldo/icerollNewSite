@@ -6303,7 +6303,6 @@ table.alt tbody tr td {
 
 /* Intro */
 #intro {
-  color: #ffffff;
   padding: 8rem 4rem 6rem 4rem ;
   -moz-align-items: center;
   -webkit-align-items: center;
@@ -6330,33 +6329,14 @@ table.alt tbody tr td {
   text-align: center;
   z-index: 1;
   min-height: 100vh; }
-  #intro input, #intro select, #intro textarea {
-    color: #ffffff; }
-  #intro a {
-    color: #ffffff;
-    border-bottom-color: rgba(255, 255, 255, 0.5); }
-    #intro a:hover {
-      border-bottom-color: transparent;
-      color: #e83a4e !important; }
-  #intro strong, #intro b {
-    color: #ffffff; }
-  #intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
-    color: #ffffff; }
-  #intro blockquote {
-    border-left-color: #ffffff; }
-  #intro code {
-    background: rgba(255, 255, 255, 0.075);
-    border-color: #ffffff; }
-  #intro hr {
-    border-bottom-color: #ffffff; }
   #intro input[type="submit"],
   #intro input[type="reset"],
   #intro input[type="button"],
   #intro button,
   #intro .button {
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px #ffffff;
-    color: #ffffff !important; }
+    box-shadow: inset 0 0 0 2px #1e252d;
+    color: #1e252d !important; }
     #intro input[type="submit"]:hover,
     #intro input[type="reset"]:hover,
     #intro input[type="button"]:hover,
@@ -6369,7 +6349,7 @@ table.alt tbody tr td {
     #intro input[type="button"].primary,
     #intro button.primary,
     #intro .button.primary {
-      background-color: #ffffff;
+      background-color: #1e252d;
       box-shadow: none;
       color: #1e252d !important; }
       #intro input[type="submit"].primary:hover,
@@ -6478,17 +6458,17 @@ table.alt tbody tr td {
   text-align: center;
   z-index: 2; }
   #header input, #header select, #header textarea {
-    color: #ffffff; }
+    color: #1e252d; }
   #header a {
-    color: #ffffff;
+    color: #1e252d;
     border-bottom-color: rgba(255, 255, 255, 0.5); }
     #header a:hover {
       border-bottom-color: transparent;
       color: #e83a4e !important; }
   #header strong, #header b {
-    color: #ffffff; }
+    color: #1e252d; }
   #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-    color: #ffffff; }
+    color: #1e252d; }
   #header blockquote {
     border-left-color: #ffffff; }
   #header code {
@@ -6543,17 +6523,17 @@ table.alt tbody tr td {
   #nav ul.icons.alt li a.icon:hover:before {
     box-shadow: inset 0 0 0 2px #e83a4e; }
   #nav input, #nav select, #nav textarea {
-    color: #ffffff; }
+    color: #1e252d; }
   #nav a {
-    color: #ffffff;
+    color: #1e252d;
     border-bottom-color: rgba(255, 255, 255, 0.5); }
     #nav a:hover {
       border-bottom-color: transparent;
       color: #e83a4e !important; }
   #nav strong, #nav b {
-    color: #ffffff; }
+    color: #1e252d; }
   #nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
-    color: #ffffff; }
+    color: #1e252d; }
   #nav blockquote {
     border-left-color: #ffffff; }
   #nav code {
@@ -6608,7 +6588,7 @@ table.alt tbody tr td {
         padding: 0 2rem; }
         #nav ul.menu li a:hover {
           color: inherit !important;
-          background-color: rgba(255, 255, 255, 0.1); }
+          background-color: rgba(33, 41, 49, 0.1); }
       #nav ul.menu li.active {
         background-color: #ffffff; }
         #nav ul.menu li.active a {
@@ -7024,9 +7004,8 @@ table.alt tbody tr td {
       width: 100%; } }
 
 #copyright {
-  color: #ffffff;
   position: relative;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(33, 41, 49, 0.45);
   cursor: default;
   font-family: "Oleo Script", cursive, Helvetica, sans-serif;
   font-size: 0.8rem;
@@ -7039,25 +7018,6 @@ table.alt tbody tr td {
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2; }
-  #copyright input, #copyright select, #copyright textarea {
-    color: #ffffff; }
-  #copyright a {
-    color: #ffffff;
-    border-bottom-color: rgba(255, 255, 255, 0.5); }
-    #copyright a:hover {
-      border-bottom-color: transparent;
-      color: #e83a4e !important; }
-  #copyright strong, #copyright b {
-    color: #ffffff; }
-  #copyright h1, #copyright h2, #copyright h3, #copyright h4, #copyright h5, #copyright h6 {
-    color: #ffffff; }
-  #copyright blockquote {
-    border-left-color: #ffffff; }
-  #copyright code {
-    background: rgba(255, 255, 255, 0.075);
-    border-color: #ffffff; }
-  #copyright hr {
-    border-bottom-color: #ffffff; }
   #copyright a {
     color: inherit;
     border-bottom-color: inherit; }
@@ -7099,7 +7059,7 @@ table.alt tbody tr td {
   top: 0.75rem;
   right: 0.75rem;
   border: 0;
-  color: #ffffff;
+  color: #1e252d;
   font-family: "Oleo Script", cursive, Helvetica, sans-serif;
   font-size: 0.9rem;
   font-weight: 900;

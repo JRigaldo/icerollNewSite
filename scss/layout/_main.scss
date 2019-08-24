@@ -62,6 +62,10 @@
         width: 100%;
         padding: 0;
         >article {
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
             border-color: _palette(border);
             border-left-width: 2px;
             border-style: solid;
@@ -77,6 +81,11 @@
                 border-top-width: 0;
             }
         }
+        // @include breakpoint('>=xlarge') {
+        //     >article {
+        //         min-height: 755px;
+        //     }
+        // }
         @include breakpoint('<=medium') {
             @include fixed-grid-resize(( columns: 2, gutters: (_size(padding) * 2.5), flush: false));
         }

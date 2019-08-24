@@ -46,16 +46,16 @@ add_filter('excerpt_length', 'custom_excerpt');
 // }
 // add_filter( 'the_title', 'short_title', 10, 1 );
 
-function max_title_length( $title ) {
-    $max = 20;
-    if( strlen( $title ) > $max ) {
-    return substr( $title, 0, $max ). "[&hellip;]";
-    } else {
-    return $title;
-    }
-}
+// function max_title_length( $title ) {
+//     $max = 20;
+//     if( strlen( $title ) > $max ) {
+//     return substr( $title, 0, $max ). "[&hellip;]";
+//     } else {
+//     return $title;
+//     }
+// }
 
-add_filter( 'the_title', 'max_title_length');
+// add_filter( 'the_title', 'max_title_length');
 
 function myWidgetsInit(){
     register_sidebar(array(
@@ -67,10 +67,17 @@ function myWidgetsInit(){
 add_action('widgets_init', 'myWidgetsInit');
 
 
+// in homepage show 4 posts
 
+function homepage_limits( $limits )
+{
+     if(!is_home()) {
+        return  'LIMIT 0, 8';;
+     }
+ return $limits;
+}
 
-
-
+add_filter('post_limits', 'homepage_limits' );
 
 
 

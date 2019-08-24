@@ -175,9 +175,10 @@
 	}
 
 	#copyright {
-		@include color-typography(invert);
+		// @include color-typography(invert);
 		position: relative;
-		color: transparentize(_palette(invert, fg), 0.75);
+		// color: transparentize(_palette(invert, fg), 0.55);
+		color: transparentize(_palette(fg), 0.55);
 		cursor: default;
 		font-family: _font(family-heading);
 		font-size: 0.8rem;

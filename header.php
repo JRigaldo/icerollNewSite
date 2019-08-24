@@ -16,9 +16,9 @@
 	<!-- Wrapper -->
 	<div id="wrapper" class="fade-in">
 
-		<?php  
 		
-		if(is_front_page()){ ?>
+		 <?php if(is_home() && !is_paged()) : ?>
+
 		<!-- Intro -->
 		<div id="intro">
 			<h1><?php bloginfo('name') ?></h1>
@@ -27,9 +27,7 @@
 				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 			</ul>
 		</div>
-		<?php
-		}
-		?>
+		<?php endif; ?>
 
 
 
