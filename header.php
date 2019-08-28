@@ -22,6 +22,14 @@
 		<!-- Intro -->
 		<div id="intro">
 			<h1><?php bloginfo('name') ?></h1>
+			<div class="youtube"><?php  the_field('page_intro_text', 0); ?></div>
+
+			<!--?php $homepageid = get_option('page_on_front');
+
+			echo $Page->ID . "<p>" . $homepageid . "</p>";
+
+			?-->
+
 			<p><?php bloginfo('description') ?></p>
 			<ul class="actions">
 				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>

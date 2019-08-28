@@ -34,7 +34,7 @@
 			'border-color #{_duration(transition)} ease-in-out',
 			'box-shadow #{_duration(transition)} ease-in-out'
 		));
-		border-bottom: dotted 1px;
+		// border-bottom: dotted 1px;
 		text-decoration: none;
 
 		&:hover {
@@ -55,14 +55,20 @@
 		margin: 0 0 _size(element-margin) 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2{
 		font-family: _font(family-heading);
+	}
+
+	h3, h4, h5, h6 {
+		font-family: _font(family);
+	}
+
+	h1, h2, h3, h4, h5, h6{
 		font-weight: _font(weight-heading);
 		line-height: 1.5;
 		letter-spacing: 0.075em;
 		// text-transform: uppercase;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
-
 		a {
 			font-size: 1.2em;
 			border-bottom: 0;

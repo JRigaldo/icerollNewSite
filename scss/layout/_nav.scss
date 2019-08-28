@@ -30,7 +30,7 @@
 				@include vendor('display', 'flex');
 				@include vendor('flex-grow', '1');
 				@include vendor('flex-shrink', '1');
-				font-family: _font(family-heading);
+				font-family: _font(family);
 				font-weight: _font(weight-heading);
 				letter-spacing: 0.075em;
 				list-style: none;
@@ -53,7 +53,7 @@
 						padding: 0 2rem;
 
 						&:hover {
-							color: inherit !important;
+							color: _palette(fg);
 							background-color: transparentize(_palette(fg), 0.9);
 							// background-color: transparentize(_palette(invert, fg), 0.9);
 						}

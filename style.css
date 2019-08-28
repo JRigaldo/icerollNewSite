@@ -9,7 +9,7 @@ Version: 1.0
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i|Oleo+Script:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i&display=swap|Oleo+Script+Swash+Caps:700&display=swap");
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
@@ -4460,7 +4460,7 @@ body {
   color: #212931; }
 
 body, input, select, textarea {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Montserrat", Georgia, serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 2.375; }
@@ -4470,7 +4470,6 @@ a {
   -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  border-bottom: dotted 1px;
   text-decoration: none; }
   a:hover {
     border-bottom-color: transparent; }
@@ -4485,8 +4484,13 @@ p {
   text-align: justify;
   margin: 0 0 2rem 0; }
 
+h1, h2 {
+  font-family: "Oleo Script Swash Caps", cursive, Helvetica, sans-serif; }
+
+h3, h4, h5, h6 {
+  font-family: "Montserrat", Georgia, serif; }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Oleo Script", cursive, Helvetica, sans-serif;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
@@ -5514,7 +5518,7 @@ button,
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
-  font-family: "Oleo Script", cursive, Helvetica, sans-serif;
+  font-family: "Montserrat", Georgia, serif;
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -5698,7 +5702,7 @@ form {
 
 label {
   display: block;
-  font-family: "Oleo Script", cursive, Helvetica, sans-serif;
+  font-family: "Montserrat", Georgia, serif;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
@@ -5776,7 +5780,7 @@ input[type="radio"] {
     display: inline-block;
     font-size: 1rem;
     letter-spacing: 0;
-    font-family: "Merriweather", Georgia, serif;
+    font-family: "Montserrat", Georgia, serif;
     text-transform: none;
     font-weight: 300;
     padding-left: 2.8rem;
@@ -6120,7 +6124,7 @@ table {
   table td {
     padding: 0.75rem 0.75rem; }
   table th {
-    font-family: "Oleo Script", cursive, Helvetica, sans-serif;
+    font-family: "Oleo Script Swash Caps", cursive, Helvetica, sans-serif;
     font-size: 0.8rem;
     font-weight: 900;
     letter-spacing: 0.075em;
@@ -6188,7 +6192,7 @@ table.alt tbody tr td {
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
     border: solid 2px;
     display: inline-block;
-    font-family: "Oleo Script", cursive, Helvetica, sans-serif;
+    font-family: "Montserrat", Georgia, serif;
     font-size: 0.8rem;
     font-weight: 900;
     height: 3rem;
@@ -6567,7 +6571,7 @@ table.alt tbody tr td {
     -webkit-flex-shrink: 1;
     -ms-flex-shrink: 1;
     flex-shrink: 1;
-    font-family: "Oleo Script", cursive, Helvetica, sans-serif;
+    font-family: "Montserrat", Georgia, serif;
     font-weight: 900;
     letter-spacing: 0.075em;
     list-style: none;
@@ -6587,7 +6591,7 @@ table.alt tbody tr td {
         outline: none;
         padding: 0 2rem; }
         #nav ul.menu li a:hover {
-          color: inherit !important;
+          color: #212931;
           background-color: rgba(33, 41, 49, 0.1); }
       #nav ul.menu li.active {
         background-color: #ffffff; }
@@ -6634,6 +6638,19 @@ table.alt tbody tr td {
       font-size: 4rem;
       line-height: 1.1;
       margin: 0 0 2rem 0; }
+    #main > .post header.major .video {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+      overflow: hidden; }
+      #main > .post header.major .video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important; }
     #main > .post.featured {
       text-align: center; }
     @media screen and (max-width: 1280px) {
@@ -6692,6 +6709,11 @@ table.alt tbody tr td {
         border-left-width: 0; }
       #main > .posts > article:nth-child(-n + 2) {
         border-top-width: 0; }
+    #main > .posts article.post-aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
     @media screen and (max-width: 980px) {
       #main > .posts > * {
         width: 50%; }
@@ -6960,7 +6982,7 @@ table.alt tbody tr td {
   #footer form label,
   #footer h3,
   #footer p {
-    font-size: 0.8rem; }
+    font-size: 0.9rem; }
   @media screen and (max-width: 980px) {
     #footer {
       display: block; }
@@ -7007,8 +7029,8 @@ table.alt tbody tr td {
   position: relative;
   color: rgba(33, 41, 49, 0.45);
   cursor: default;
-  font-family: "Oleo Script", cursive, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-family: "Oleo Script Swash Caps", cursive, Helvetica, sans-serif;
+  font-size: 0.9rem;
   font-weight: 900;
   letter-spacing: 0.075em;
   line-height: 1.5;
@@ -7060,7 +7082,7 @@ table.alt tbody tr td {
   right: 0.75rem;
   border: 0;
   color: #1e252d;
-  font-family: "Oleo Script", cursive, Helvetica, sans-serif;
+  font-family: "Montserrat", Georgia, serif;
   font-size: 0.9rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -7127,7 +7149,7 @@ table.alt tbody tr td {
       #navPanel .links li a {
         border-bottom: 0;
         display: block;
-        font-family: "Oleo Script", cursive, Helvetica, sans-serif;
+        font-family: "Montserrat", Georgia, serif;
         font-size: 0.9rem;
         font-size: 0.9rem;
         font-weight: 900;

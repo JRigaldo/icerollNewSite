@@ -31,6 +31,20 @@
                     line-height: 1.1;
                     margin: 0 0 _size(element-margin) 0;
                 }
+                .video{
+                    position: relative;
+                    padding-bottom: 56.25%; /* 16:9 */
+                    padding-top: 25px;
+                    height: 0;
+                    overflow: hidden;
+                    iframe{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100% !important;
+                        height: 100% !important;
+                    }
+                }
             }
         }
         &.featured {
@@ -81,6 +95,13 @@
                 border-top-width: 0;
             }
         }
+        article.post-aside {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        
         // @include breakpoint('>=xlarge') {
         //     >article {
         //         min-height: 755px;
@@ -121,3 +142,4 @@
         width: 100%;
     }
 }
+
