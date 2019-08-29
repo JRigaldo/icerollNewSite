@@ -5,6 +5,22 @@
 
     <?php if(is_home() && !is_paged()) : ?>
 
+    <!-- Add new post API -->
+    <article class="post featured">
+        <header class="major">
+            
+            <div class="admin-quick-add">
+                <h3>Quick Add Post</h3>
+                <input type="text" name="title" placeholder="Title">
+                <textarea name="content" placeholder="Content"></textarea>
+                <button id="quick-add-button">Create Post</button>
+            </div>
+
+        </header>
+        <button id="post-btn">Load blog posts</button>
+        <div id="blog-posts-container"></div>
+    ></article>
+
     <!-- Featured Post -->
     <article class="post featured">
         <header class="major">
@@ -67,7 +83,7 @@
             <header>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             </header>
-            <a href="#" class="image fit"><?php the_post_thumbnail('small-thumbnail'); ?></a>
+            <a href="<?php the_permalink(); ?>" class="image fit"><?php the_post_thumbnail('small-thumbnail'); ?></a>
             <p><?php the_excerpt(); ?></p>
             <ul class="actions special">
                 <li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
