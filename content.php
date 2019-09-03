@@ -7,6 +7,6 @@
     <a href="#" class="image fit"><?php the_post_thumbnail('small-thumbnail'); ?></a>
     <p><?php the_excerpt(); ?></p>
     <ul class="actions special">
-        <li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
+        <li><a href="<?php the_permalink(); ?>" class="button">Voir l'article</a></li>
     </ul>
 </article>

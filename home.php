@@ -6,20 +6,23 @@
     <?php if(is_home() && !is_paged()) : ?>
 
     <!-- Add new post API -->
-    <article class="post featured">
+    <!--article class="post featured">
         <header class="major">
-            
+            <?php  if(current_user_can('administrator')) : ?>
             <div class="admin-quick-add">
-                <h3>Quick Add Post</h3>
+                 <h3>Quick Add Post</h3>
                 <input type="text" name="title" placeholder="Title">
+                <input type="file" name="file">
                 <textarea name="content" placeholder="Content"></textarea>
                 <button id="quick-add-button">Create Post</button>
             </div>
+            <?php endif; ?>
 
         </header>
+
         <button id="post-btn">Load blog posts</button>
         <div id="blog-posts-container"></div>
-    ></article>
+    </article-->
 
     <!-- Featured Post -->
     <article class="post featured">
@@ -27,7 +30,7 @@
 
             <?php
                 $hero = array(
-                    'p' => 102,
+                    'p' => 38,
                     'post_type' => 'any',
                     'post_per_page' => 1
                 );
@@ -40,9 +43,12 @@
                         $queryhero->the_post(); ?>
 
                     <h2><?php the_title(); ?></h2>
-                        <p><?php the_content(); ?></p>
-                    </header>
-                    <!--div href="#" class="image main"--><!--?php the_field('hero_text'); ?--><!--/div-->
+                    <p><?php the_field('hero_text', 'option'); ?></p>                    
+        </header>
+        <a href="<?php the_permalink(); ?>" class="image main"><?php the_post_thumbnail('banner-image'); ?></a>
+        <ul class="actions special">
+			<li><a href="#" class="button large">Voir l'article</a></li>
+		</ul>
 
                     <?php endwhile;
                 else : echo '<p>No content found</p>';
@@ -86,7 +92,7 @@
             <a href="<?php the_permalink(); ?>" class="image fit"><?php the_post_thumbnail('small-thumbnail'); ?></a>
             <p><?php the_excerpt(); ?></p>
             <ul class="actions special">
-                <li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
+                <li><a href="<?php the_permalink(); ?>" class="button">Voir l'article</a></li>
             </ul>
         </article>
 

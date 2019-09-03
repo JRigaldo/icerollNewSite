@@ -4,7 +4,7 @@ var blogPostsContainer = document.getElementById('blog-posts-container');
 if(blogPostsBtn){
     blogPostsBtn.addEventListener('click', function(){
         var ourRequest = new XMLHttpRequest();
-        ourRequest.open('GET', 'http://localhost:8888/iceroll/wp-json/wp/v2/posts');
+        ourRequest.open('GET', magicalData.siteURL + '/wp-json/wp/v2/posts');
         ourRequest.onload = function() {
             if(ourRequest.status >= 200 && ourRequest.status < 400){
                 var data = JSON.parse(ourRequest.responseText);
@@ -45,9 +45,19 @@ if(quickAddButton){
 
 
         var createPost = new XMLHttpRequest();
-        createPost.open('POST', 'http://localhost:8888/iceroll/wp-json/wp/v2/posts');
+        createPost.open('POST', magicalData.siteURL + '/wp-json/wp/v2/posts');
         createPost.setRequestHeader('X-WP-Nonce', magicalData.nonce);
         createPost.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
         createPost.send(JSON.stringify(myPostData));
+            if(createPost.readyState == 4){
+                if(createPost.status == 201){
+                    document.querySelector('.admin-quick-add [name="title"]').value = '';
+                    document.querySelector('.admin-quick-add [name="content"]').value = '';
+                }else{
+                    alert('Error - try again.');
+                }
+            }
     });
 }
+
+

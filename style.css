@@ -5982,6 +5982,92 @@ a.image {
     -ms-transform: scale(1.05);
     transform: scale(1.05); }
 
+/* Actions */
+ul.actions {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  cursor: default;
+  list-style: none;
+  margin-top: 0.5rem;
+  margin-left: -1rem;
+  padding-left: 0; }
+  ul.actions li {
+    padding: 0 0 0 1rem;
+    vertical-align: middle; }
+  ul.actions.special {
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0; }
+    ul.actions.special li:first-child {
+      padding-left: 0; }
+  ul.actions.stacked {
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 0; }
+    ul.actions.stacked li {
+      padding: 1.3rem 0 0 0; }
+      ul.actions.stacked li:first-child {
+        padding-top: 0; }
+  ul.actions.fit {
+    width: calc(100% + 1rem); }
+    ul.actions.fit li {
+      -moz-flex-grow: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-grow: 1;
+      flex-grow: 1;
+      -moz-flex-shrink: 1;
+      -webkit-flex-shrink: 1;
+      -ms-flex-shrink: 1;
+      flex-shrink: 1;
+      width: 100%; }
+      ul.actions.fit li > * {
+        width: 100%; }
+    ul.actions.fit.stacked {
+      width: 100%; }
+  @media screen and (max-width: 480px) {
+    ul.actions:not(.fixed) {
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-left: 0;
+      width: 100% !important; }
+      ul.actions:not(.fixed) li {
+        -moz-flex-grow: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-grow: 1;
+        flex-grow: 1;
+        -moz-flex-shrink: 1;
+        -webkit-flex-shrink: 1;
+        -ms-flex-shrink: 1;
+        flex-shrink: 1;
+        padding: 1rem 0 0 0;
+        text-align: center;
+        width: 100%; }
+        ul.actions:not(.fixed) li > * {
+          width: 100%; }
+        ul.actions:not(.fixed) li:first-child {
+          padding-top: 0; }
+        ul.actions:not(.fixed) li input[type="submit"],
+        ul.actions:not(.fixed) li input[type="reset"],
+        ul.actions:not(.fixed) li input[type="button"],
+        ul.actions:not(.fixed) li button,
+        ul.actions:not(.fixed) li .button {
+          width: 100%; }
+          ul.actions:not(.fixed) li input[type="submit"].icon:before,
+          ul.actions:not(.fixed) li input[type="reset"].icon:before,
+          ul.actions:not(.fixed) li input[type="button"].icon:before,
+          ul.actions:not(.fixed) li button.icon:before,
+          ul.actions:not(.fixed) li .button.icon:before {
+            margin-left: -0.5rem; } }
+
 /* Icons */
 ul.icons {
   cursor: default;
@@ -6130,7 +6216,7 @@ table {
   table td {
     padding: 0.75rem 0.75rem; }
   table th {
-    font-family: "Oleo Script Swash Caps", cursive, Helvetica, sans-serif;
+    font-family: "Montserrat", Georgia, serif;
     font-size: 0.8rem;
     font-weight: 900;
     letter-spacing: 0.075em;
@@ -6370,13 +6456,20 @@ table.alt tbody tr td {
         background-color: #e83a4e; }
   #intro h1 {
     font-size: 5rem;
-    line-height: 1; }
+    line-height: 1;
+    margin-bottom: 1.5rem; }
+  #intro h5 {
+    text-align: center !important; }
+  #intro h5 p {
+    text-align: center !important; }
   #intro p {
     font-size: 1.5rem;
     font-style: italic;
     margin-top: -0.25rem;
-    text-align: center;
-    max-width: 475px; }
+    max-width: 800px !important;
+    line-height: 2.2rem !important;
+    margin-bottom: 0.5rem !important;
+    text-align: center !important; }
   #intro + #header {
     margin-top: -20rem; }
     #intro + #header .logo {
@@ -6645,19 +6738,6 @@ table.alt tbody tr td {
       font-size: 4rem;
       line-height: 1.1;
       margin: 0 0 2rem 0; }
-    #main > .post header.major .video {
-      position: relative;
-      padding-bottom: 56.25%;
-      /* 16:9 */
-      padding-top: 25px;
-      height: 0;
-      overflow: hidden; }
-      #main > .post header.major .video iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important; }
     #main > .post.featured {
       text-align: center; }
     @media screen and (max-width: 1280px) {
@@ -6751,6 +6831,31 @@ table.alt tbody tr td {
   @media screen and (max-width: 480px) {
     #main {
       width: 100%; } }
+
+.embed {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  max-width: 650px; }
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  height: auto; }
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; }
 
 /* Footer */
 #footer {

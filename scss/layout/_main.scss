@@ -7,60 +7,57 @@
     width: calc(100% - #{_size(padding) * 2});
     max-width: _size(wrapper);
     z-index: 2;
+
     >* {
         @include padding((_size(padding) * 2), (_size(padding) * 2));
         border-top: solid 2px _palette(border);
         margin: 0;
+
         &:first-child {
             border-top: 0;
         }
     }
+
     >footer {
         text-align: center;
     }
+
     >.post {
         @include padding((_size(padding) * 4), (_size(padding) * 4));
+
         header {
             &.major {
                 >.date {
                     margin-top: -2rem;
                 }
+
                 >h1,
                 h2 {
                     font-size: 4rem;
                     line-height: 1.1;
                     margin: 0 0 _size(element-margin) 0;
                 }
-                .video{
-                    position: relative;
-                    padding-bottom: 56.25%; /* 16:9 */
-                    padding-top: 25px;
-                    height: 0;
-                    overflow: hidden;
-                    iframe{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100% !important;
-                        height: 100% !important;
-                    }
-                }
             }
         }
+
         &.featured {
             text-align: center;
         }
+
         @include breakpoint('<=large') {
             @include padding((_size(padding) * 3), (_size(padding) * 2));
         }
+
         @include breakpoint('<=small') {
             @include padding((_size(padding) * 2), (_size(padding) * 1));
+
             header {
                 &.major {
                     >.date {
                         margin-top: -1rem;
                         margin-bottom: _size(element-margin);
                     }
+
                     >h1,
                     h2 {
                         font-size: 2.5rem;
@@ -71,10 +68,12 @@
             }
         }
     }
+
     >.posts {
-        @include fixed-grid(( columns: 2, gutters: (_size(padding) * 4), horizontal-align: center, vertical-align: flex-start, flush: false));
+        @include fixed-grid((columns: 2, gutters: (_size(padding) * 4), horizontal-align: center, vertical-align: flex-start, flush: false));
         width: 100%;
         padding: 0;
+
         >article {
             // display: flex;
             // flex-direction: column;
@@ -85,46 +84,56 @@
             border-style: solid;
             border-top-width: 2px;
             text-align: center;
+
             > :last-child {
                 margin-bottom: 0;
             }
+
             &:nth-child(2n - 1) {
                 border-left-width: 0;
             }
+
             &:nth-child(-n + 2) {
                 border-top-width: 0;
             }
         }
+
         article.post-aside {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         // @include breakpoint('>=xlarge') {
         //     >article {
         //         min-height: 755px;
         //     }
         // }
         @include breakpoint('<=medium') {
-            @include fixed-grid-resize(( columns: 2, gutters: (_size(padding) * 2.5), flush: false));
+            @include fixed-grid-resize((columns: 2, gutters: (_size(padding) * 2.5), flush: false));
         }
+
         @include breakpoint('<=small') {
-            @include fixed-grid-resize(( columns: 1, gutters: (_size(padding) * 2), prev-columns: 2, flush: false));
+            @include fixed-grid-resize((columns: 1, gutters: (_size(padding) * 2), prev-columns: 2, flush: false));
+
             >article {
                 &:nth-child(2n - 1) {
                     border-left-width: 2px;
                 }
+
                 &:nth-child(-n + 2) {
                     border-top-width: 2px;
                 }
+
                 &:nth-child(n) {
                     border-left-width: 0;
                 }
+
                 &:nth-child(-n + 1) {
                     border-top-width: 0;
                 }
+
                 .image {
                     max-width: 25rem;
                     margin-left: auto;
@@ -133,13 +142,43 @@
             }
         }
     }
+
     @include breakpoint('<=small') {
         >* {
             @include padding((_size(padding) * 1), (_size(padding) * 1));
         }
     }
+
     @include breakpoint('<=xsmall') {
         width: 100%;
     }
 }
 
+
+.embed{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 650px;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

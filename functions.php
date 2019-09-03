@@ -16,7 +16,8 @@ function add_this_script_footer(){
     wp_enqueue_script('frontwp', get_template_directory_uri() . '/scripts/frontwp.js', NULL , 1.0, true);
 
     wp_localize_script('frontwp', 'magicalData', array(
-        'nonce' => wp_create_nonce('wp_rest')
+        'nonce' => wp_create_nonce('wp_rest'),
+        'siteURL' => get_site_url()
     ));
 }
 
@@ -85,6 +86,45 @@ add_filter('post_limits', 'homepage_limits' );
 
 
 
+// Get image through WP JSON API
+add_action('rest_api_init', 'register_rest_images' );
+function register_rest_images(){
+    register_rest_field( array('post'),
+        'fimg_url',
+        array(
+            'get_callback'    => 'get_rest_featured_image',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+function get_rest_featured_image( $object, $field_name, $request ) {
+    if( $object['featured_media'] ){
+        $img = wp_get_attachment_image_src( $object['featured_media'], 'app-thumb' );
+        return $img[0];
+    }
+    return false;
+}
+
+// options ACF
+if( function_exists('acf_add_options_page') ) {
+	
+    acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Header Settings',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	
+}
 
 
 

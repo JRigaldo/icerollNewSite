@@ -22,15 +22,12 @@
 		<!-- Intro -->
 		<div id="intro">
 			<h1><?php bloginfo('name') ?></h1>
-			<div class="youtube"><?php  the_field('page_intro_text', 0); ?></div>
-
-			<!--?php $homepageid = get_option('page_on_front');
-
-			echo $Page->ID . "<p>" . $homepageid . "</p>";
-
-			?-->
-
 			<p><?php bloginfo('description') ?></p>
+			<div class="embed">
+				<div class="embed-container">
+				<?php the_field('video', 'option'); ?>
+ 			</div>
+			</div>
 			<ul class="actions">
 				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 			</ul>
@@ -41,7 +38,7 @@
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo"><img
+			<a href="<?php echo home_url(); ?>" class="logo"><img
 					src="<?php bloginfo('stylesheet_directory'); ?>/	images/logoIceRoll_300.png" alt=""></a>
 		</header>
 		<!-- Nav -->
@@ -53,9 +50,9 @@
 
 
 			<ul class="icons">
-				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="https://twitter.com/IcerollLausanne" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="https://www.facebook.com/iceroll.lausanne.5" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="https://www.instagram.com/icerolldelice/?hl=fr" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://www.youtube.com" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
 			</ul>
 		</nav>
