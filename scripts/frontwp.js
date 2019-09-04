@@ -1,3 +1,6 @@
+//Add new post on frontpage
+/* learnwebcode on youtube */
+
 var blogPostsBtn = document.getElementById('post-btn');
 var blogPostsContainer = document.getElementById('blog-posts-container');
 
