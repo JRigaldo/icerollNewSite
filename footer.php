@@ -1,10 +1,13 @@
 				<!-- Footer -->
                 	<footer id="footer">
 						<section>
-							<?php if ( shortcode_exists( 'contact-form-7' ) ) { echo do_shortcode('[contact-form-7 id="95" title="Formulaire de contact 1"]'); } ?>
+
+							<?php the_field('footer_contact') ?>
+
+							<!--?php if ( shortcode_exists( 'contact-form-7' ) ) { echo do_shortcode('[contact-form-7 id="95" title="Formulaire de contact 1"]'); } ? -->
 
 
-							<!-- <form method="post" action="#">
+							<!-- form method="post" action="#">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
