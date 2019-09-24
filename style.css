@@ -5718,6 +5718,7 @@ input[type="password"],
 input[type="email"],
 input[type="number"],
 input[type="tel"],
+input[type="url"],
 input[type="date"]
 select,
 textarea {
@@ -5739,6 +5740,7 @@ textarea {
   input[type="email"]:invalid,
   input[type="number"]:invalid,
   input[type="tel"]:invalid,
+  input[type="url"]:invalid,
   input[type="date"]
 select:invalid,
   textarea:invalid {
@@ -5759,6 +5761,7 @@ select {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="url"],
 select {
   height: 3rem; }
 
@@ -5848,12 +5851,14 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="url"],
 select,
 textarea {
   border-color: #eeeeee; }
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="email"]:focus,
+  input[type="url"]:focus,
   select:focus,
   textarea:focus {
     border-color: #e83a4e; }
@@ -5898,6 +5903,47 @@ input[type="radio"]:focus + label:before {
 
 .formerize-placeholder {
   color: #909498 !important; }
+
+ol.comment-list {
+  padding: 0; }
+
+article.comment-body {
+  position: relative;
+  margin: 30px 0 30px -10px; }
+  article.comment-body .comment-metadata {
+    position: relative;
+    display: none !important; }
+  article.comment-body .comment-author {
+    position: relative; }
+    article.comment-body .comment-author img.avatar {
+      border-radius: 50%;
+      position: relative;
+      top: 10px;
+      left: 5px; }
+    article.comment-body .comment-author b.fn {
+      position: absolute;
+      top: 0;
+      left: 65px; }
+    article.comment-body .comment-author .says {
+      display: none; }
+  article.comment-body .comment-content {
+    position: absolute;
+    top: 35px;
+    left: 65px; }
+    article.comment-body .comment-content p {
+      line-height: 1.3em; }
+  article.comment-body .reply {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    article.comment-body .reply .comment-reply-link {
+      border: 2px solid;
+      padding: 5px;
+      border-radius: 20px;
+      font-size: 0.8em; }
+
+.comment-notes {
+  line-height: 1.6em; }
 
 /* Icon */
 .icon {
@@ -6937,12 +6983,14 @@ table.alt tbody tr td {
   #footer input[type="text"],
   #footer input[type="password"],
   #footer input[type="email"],
+  #footer input[type="url"],
   #footer select,
   #footer textarea {
     border-color: #e2e2e2; }
     #footer input[type="text"]:focus,
     #footer input[type="password"]:focus,
     #footer input[type="email"]:focus,
+    #footer input[type="url"]:focus,
     #footer select:focus,
     #footer textarea:focus {
       border-color: #e83a4e; }

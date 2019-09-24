@@ -89,6 +89,7 @@
 	input[type="email"],
 	input[type="number"],
 	input[type="tel"],
+	input[type="url"],
 	input[type="date"]
 	select,
 	textarea {
@@ -130,6 +131,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="url"],
 	select {
 		height: _size(element-height);
 	}
@@ -225,6 +227,7 @@
 		input[type="text"],
 		input[type="password"],
 		input[type="email"],
+		input[type="url"],
 		select,
 		textarea {
 			border-color: _palette($p, border);
@@ -294,5 +297,7 @@
 			color: _palette($p, fg-light) !important;
 		}
 	}
+
+	
 
 	@include color-form;
