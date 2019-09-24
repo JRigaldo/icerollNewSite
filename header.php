@@ -8,11 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i&display=swap|Oleo+Script+Swash+Caps:700&display=swap">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_site_url(); ?>/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_site_url(); ?>/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_site_url(); ?>/favicon-16x16.png">
+	<link rel="shortcut icon" href="<?php echo get_site_url(); ?>/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?php echo get_site_url(); ?>/favicon.ico" type="image/x-icon">
 </head>
 
 <body <?php body_class(); ?>class="is-preload">
