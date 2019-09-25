@@ -6647,11 +6647,14 @@ table.alt tbody tr td {
     visibility: visible; }
   @media screen and (max-width: 980px) {
     #header {
-      height: 14rem;
+      height: 17rem;
       padding-bottom: 4rem; } }
   @media screen and (max-width: 736px) {
     #header {
-      padding-bottom: 3rem; } }
+      height: 12rem;
+      padding-bottom: 3rem; }
+      #header .logo img {
+        width: 70%; } }
 
 /* Nav */
 #nav {

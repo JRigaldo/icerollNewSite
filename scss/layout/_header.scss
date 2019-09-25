@@ -46,16 +46,20 @@
 		}
 
 		@include breakpoint('<=medium') {
-			height: 14rem;
+			height: 17rem;
 			padding-bottom: (_size(padding) * 2);
 		}
 
 		@include breakpoint('<=small') {
+			height: 12rem;
 			padding-bottom: (_size(padding) * 1.5);
 
 			// .logo {
 				// font-size: 1.75rem;
 				// border-width: 3px !important;
 			// }
+			.logo img{
+				width: 70%;
+			}
 		}
 	}
