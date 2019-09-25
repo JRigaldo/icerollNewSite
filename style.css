@@ -5845,6 +5845,16 @@ input[type="radio"] + label:before {
 :-ms-input-placeholder {
   opacity: 1.0; }
 
+.comment-form .logged-in-as {
+  color: #FFF; }
+  .comment-form .logged-in-as a {
+    display: inline-block;
+    color: #212931;
+    border: 2px solid;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px; }
+
 label {
   color: #212931; }
 

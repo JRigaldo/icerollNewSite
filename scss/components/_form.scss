@@ -298,6 +298,20 @@
 		}
 	}
 
+	.comment-form{
+		.logged-in-as{
+			color: #FFF;
+			a {
+				display: inline-block;
+				color: #212931;
+				border: 2px solid;
+				padding: 5px 10px;
+				border-radius: 20px;
+				margin: 5px;
+			}
+		}
+	}
+
 	
 
 	@include color-form;
