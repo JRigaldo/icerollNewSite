@@ -119,8 +119,8 @@
       
                 get_template_part('content', get_post_format());
 
-                endwhile;
-        
+                endwhile; 
+
             else : echo '<p>No content found</p>';
 
             endif;
@@ -139,6 +139,8 @@
             <?php endwhile;
 
             echo paginate_links();
+            
+
 
             else : echo '<p>No content found</p>';
 
