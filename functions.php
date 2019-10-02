@@ -160,5 +160,4 @@ wp_enqueue_script( 'google', get_template_directory_uri() . '/scripts/google.js'
 
 
 
-
 ?>

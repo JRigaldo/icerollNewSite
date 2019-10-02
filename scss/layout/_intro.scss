@@ -3,34 +3,35 @@
 	#intro {
 		// @include color-typography(invert);
 		@include color-button(invert);
-		@include padding(_size(padding) * 4, _size(padding) * 2);
-		@include vendor('align-items', 'center');
+		// @include padding(_size(padding) * 4, 0);
 		@include vendor('display', 'flex');
+		@include vendor('align-items', 'flex-start');
 		@include vendor('flex-direction', 'column');
-		@include vendor('justify-content', 'flex-end');
+		@include vendor('justify-content', 'center');
 		@include vendor('transition', (
 			'opacity 1s ease',
 			'transform 1s ease'
 		));
 		position: relative;
 		cursor: default;
-		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
+		min-height: 100%;
+		width: calc(100% - 4rem);
+		max-width: 72rem;
+		margin: 0 auto;
+
 
 		h1 {
-			font-size: 5rem;
+			font-size: 2rem;
 			line-height: 1;
-			margin-bottom: 1.5rem;
+			margin: 0;
 		}
 
-		h5{
-			text-align: center !important;
+		h4{
+			margin: 0;
 		}
 
-		h5 p {
-			text-align: center !important;
-		}
+
 
 		p {
 			font-size: 1.5rem;
@@ -40,6 +41,34 @@
     		line-height: 2.2rem !important;
     		margin-bottom: 0.5rem !important;
 			text-align: center !important;
+		}
+
+		.embed{
+			position: relative;
+			display: block;
+			width: 100%;
+			max-width: 72rem;
+			height: 100%;
+		}
+
+		.embed-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			overflow: hidden;
+			max-width: 100%;
+			width: 100%;
+			height: auto;
+		}
+
+		.embed-container iframe,
+		.embed-container object,
+		.embed-container embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 0;
 		}
 
 		& + #header {
@@ -84,10 +113,10 @@
 			}
 		}
 
-		@include breakpoint('<=medium') {
-			@include padding(_size(padding) * 2, _size(padding) * 2);
-			min-height: 90vh;
 
+		@include breakpoint('<=medium') {	
+			@include vendor('align-items', 'center');
+			margin: 4rem auto 0 auto;
 			p {
 				br {
 					display: none;
@@ -100,13 +129,9 @@
 		}
 
 		@include breakpoint('<=small') {
-			@include padding(_size(padding) * 1.5, _size(padding) * 1);
-			min-height: 80vh;
 
 			h1 {
-				font-size: 3.25rem;
-				line-height: 1.1;
-				margin-bottom: _size(element-margin) * 0.5;
+				font-size: 1.25rem;
 			}
 
 			p {
@@ -118,4 +143,8 @@
 				display: none;
 			}
 		}
+		@include breakpoint('<=xsmall') {
+			width: 100%!important;
+		}
 	}
+

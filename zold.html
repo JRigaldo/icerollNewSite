@@ -1,0 +1,35 @@
+
+		<header class="v-header">
+			<div class="embed">
+				<?php the_field('video', 'option'); ?>
+			</div>
+
+		</header>
+
+<!-- Header -->
+		<header id="header">
+			<a href="<?php echo home_url(); ?>" class="logo"><img
+					src="<?php bloginfo('stylesheet_directory'); ?>/	images/logoIceRoll_300.png" alt=""></a>
+		</header>
+
+<!-- Intro -->
+		<div id="intro">
+			<h1><?php bloginfo('name') ?></h1>
+			<p><?php bloginfo('description') ?></p>
+			<div class="embed">
+				<div class="embed-container">
+				<?php the_field('video', 'option'); ?>
+ 			</div>
+			</div>
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			</ul>
+		</div>
+
+<article class="post featured">
+        <header class="major">
+            
+            <h2><?php the_field('header_hat', 'option'); ?></h2>
+            <p><?php the_field('header_paragraphe', 'option'); ?></p>
+
+    </article>

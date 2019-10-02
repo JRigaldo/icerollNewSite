@@ -24,7 +24,7 @@
         <div id="blog-posts-container"></div>
     </article-->
 
-    <!-- Featured Post -->
+    <!-- Featured Page -->
     <article class="post featured">
         <header class="major">
 
@@ -55,15 +55,11 @@
                 endif;
 
             ?>
-
-        <!--ul class="actions special">
-            <li><a href="#" class="button large">Full Story</a></li>
-        </ul-->
     </article>
 
     <?php endif; ?>
 
-    <!-- Posts -->
+    <!-- Posts Page -->
     <section class="posts">
 
 
@@ -105,13 +101,23 @@
         ?>
 
         <?php endif; ?>
+    </section>
+
+         <!-- <aside class="intermiss">
+            <h2>kubwefkjbwef fewiuhfewhioh fweinefw</h2>
+        </aside> -->
+
+    <!-- Posts Blog -->
+    <!--get_template_part('content', get_post_format()); -->
+    <section class="posts">
+
 
         <?php 
         
             if(have_posts()):
                 while(have_posts()) : the_post(); 
-
-                get_template_part('content', get_post_format()); 
+      
+                get_template_part('content', get_post_format());
 
                 endwhile;
         
