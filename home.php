@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header(); 
+global $wp_query;
+?>
 
 <!-- Main -->
 <div id="main">
@@ -96,22 +98,17 @@
 
         else : echo '<p>No content found</p>';
 
-        endif;
-
-        ?>
+        endif; ?>
 
         <?php endif; ?>
     </section>
 
-         <!-- <aside class="intermiss">
-            <h2>kubwefkjbwef fewiuhfewhioh fweinefw</h2>
-        </aside> -->
 
     <!-- Posts Blog -->
-    <!--get_template_part('content', get_post_format()); -->
-    <section class="posts">
-
-
+    <section 
+    class="posts posts-list" 
+    data-page="<?php get_query_var('paged') ? get_query_var('paged') : 1; ?>" 
+    data-max="<?php $wp_query->max_num_pages; ?>">
         <?php 
         
             if(have_posts()):
@@ -130,6 +127,7 @@
 
     <!-- Footer -->
     <footer>
+        <button class="button load-more">Load More Posts</button>
         <div class="pagination">
 
             <?php 
