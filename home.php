@@ -128,24 +128,6 @@ global $wp_query;
     <!-- Footer -->
     <footer>
         <button class="button load-more">Load More Posts</button>
-        <div class="pagination">
-
-            <?php 
-        
-            if(have_posts()):
-                while(have_posts()) : the_post(); ?>
-            <?php endwhile;
-
-            echo paginate_links();
-            
-
-
-            else : echo '<p>No content found</p>';
-
-            endif;
-
-            ?>
-        </div>
     </footer>
 
 </div>
