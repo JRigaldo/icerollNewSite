@@ -5618,7 +5618,7 @@ button,
     pointer-events: none;
     opacity: 0.25; }
 
-.misha_loadmore {
+.loadmore {
   background-color: #ddd;
   border-radius: 2px;
   display: block;
@@ -5632,7 +5632,7 @@ button,
   padding: 10px 0;
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out; }
 
-.misha_loadmore:hover {
+.loadmore:hover {
   background-color: #767676;
   color: #fff; }
 

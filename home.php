@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php global $wp_query; ?>
 
 <!-- Main -->
 <div id="main">
@@ -124,30 +125,18 @@
             else : echo '<p>No content found</p>';
 
             endif;
-
         ?>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="pagination">
-
-            <?php 
-        
-            if(have_posts()):
-                while(have_posts()) : the_post(); ?>
-            <?php endwhile;
-
-            echo paginate_links();
-            
-
-
-            else : echo '<p>No content found</p>';
-
-            endif;
-
-            ?>
-        </div>
+         <?php  if (  $wp_query->max_num_pages > 1 )
+            echo '<div class="loadmore">More posts</div>'; // you can use <a> as well ?>
+            <script>
+                var posts_myajax = '<?php echo serialize( $the_query->query_vars ) ?>',
+                current_page_myajax = 1,
+                max_page_myajax = <?php echo $the_query->max_num_pages ?>
+            </script>
     </footer>
 
 </div>

@@ -7,7 +7,7 @@ function resources(){
     wp_enqueue_script('scrolly', get_template_directory_uri() . '/scripts/jquery.scrolly.min.js', array('jquery'), 1.0, true);
     wp_enqueue_script('browser', get_template_directory_uri() . '/scripts/browser.min.js', array('jquery'), 1.0, false);
     wp_enqueue_script('breakpoints', get_template_directory_uri() . '/scripts/breakpoints.min.js', array('jquery'), 1.0, false);
-    wp_enqueue_script('util', get_template_directory_uri() . '/scripts/util.js', array('jquery'), 1.0, false);    
+    wp_enqueue_script('util', get_template_directory_uri() . '/scripts/util.js', array('jquery'), 1.0, false);       
 }
 add_action('wp_enqueue_scripts', 'resources');
 
@@ -146,6 +146,28 @@ function my_acf_init() {
 }
 
 add_action('acf/init', 'my_acf_init');
+
+// Load more button
+function misha_my_load_more_scripts() {
+ 
+	global $wp_query; 
+ 
+    wp_enqueue_script('my_loadmore', get_template_directory_uri() . '/scripts/loadmore.js', array('jquery'), 1.0, false); 
+ 
+	// now the most interesting part
+	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
+	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
+	wp_localize_script( 'my_loadmore', 'loadmore_params', array(
+		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+		'posts' => json_encode( $wp_query->query_vars ), // everything about your loop is here
+		'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
+		'max_page' => $wp_query->max_num_pages
+	) );
+ 
+ 	wp_enqueue_script( 'my_loadmore' );
+}
+ 
+add_action( 'wp_enqueue_scripts', 'misha_my_load_more_scripts' );
 
 
 
