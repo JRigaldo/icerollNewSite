@@ -148,12 +148,13 @@ function my_acf_init() {
 add_action('acf/init', 'my_acf_init');
 
 // Load more button
-function misha_my_load_more_scripts() {
+function my_load_more_script() {
  
 	global $wp_query; 
  
     wp_enqueue_script('my_loadmore', get_template_directory_uri() . '/scripts/loadmore.js', array('jquery'), 1.0, false); 
- 
+    
+    
 	// now the most interesting part
 	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
 	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
@@ -163,11 +164,15 @@ function misha_my_load_more_scripts() {
 		'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
 		'max_page' => $wp_query->max_num_pages
 	) );
+
+    var_dump(query_vars);
  
  	wp_enqueue_script( 'my_loadmore' );
 }
- 
-add_action( 'wp_enqueue_scripts', 'misha_my_load_more_scripts' );
+add_action( 'wp_enqueue_scripts', 'my_load_more_script' );
+add_action('wp_ajax_loadmore', 'my_load_more_script'); 
+add_action('wp_ajax_nopriv_loadmore', 'my_load_more_script');
+
 
 
 
