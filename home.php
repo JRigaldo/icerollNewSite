@@ -1,5 +1,6 @@
 <?php get_header(); 
 global $wp_query;
+// global $page, $numpages, $multipage, $more;
 ?>
 
 <!-- Main -->

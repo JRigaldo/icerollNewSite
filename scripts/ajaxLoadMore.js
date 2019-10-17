@@ -2,35 +2,39 @@ const ajaxLoadMore = () => {
     
     const templateUrl = '<?= get_bloginfo("template_url"); ?>';
     const button = document.querySelector('.load-more');
+    let postsLists = document.querySelector('.posts-list');
 
     if(typeof (button) !== 'undefined' && button !== null) {
-        document.querySelector('.posts-list').dataset.page = 1;
+        postsLists.dataset.page = 1;
+        
         
         button.addEventListener('click', (e) => {
-            let current_page = document.querySelector('.posts-list').dataset.page;
+            let current_page = jQuery(".posts-list" ).data( "page");
+            let page_max = jQuery(".posts-list" ).data( "max");
 
             let params = new URLSearchParams();
             params.append('action', 'load_more_posts');
             params.append('current_page', current_page);
+            
         
             axios.post('wp-admin/admin-ajax.php', params)
                 .then(res => {
-                    console.log({res})
-                    let posts_lists = document.querySelector('.posts-list');
+                    console.log({res});
+                    
 
-                    posts_lists.innerHTML += res.data.data;
+                    postsLists.innerHTML += res.data.data;
 
-                    let getUrl = window.location.href;
-                    // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+                    // let getUrl = window.location.href;
+                    //let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
 
-                    window.history.pushState('', '', 'page/' + (parseInt(document.querySelector('.posts-list').dataset.page) + 1 ));
+                    // window.history.pushState('', '', 'page/' + (parseInt(postsLists.dataset.page) + 1 ));
 
-                    if(document.querySelector('.posts-list').dataset.page = document.querySelector('.posts-list').dataset.max){
+                    if(current_page == page_max){
                         button.parentNode.removeChild(button);
-                    } 
-
-                    document.querySelector('.posts-list').dataset.page++;
-                });
+                    }
+                    current_page++;
+                    jQuery(".posts-list" ).data( "page",current_page);
+                }); 
 
         });
     }
