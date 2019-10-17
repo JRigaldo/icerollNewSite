@@ -1,43 +1,52 @@
-const ajaxLoadMore = () => {
-    
-    const templateUrl = '<?= get_bloginfo("template_url"); ?>';
-    const button = document.querySelector('.load-more');
-    let postsLists = document.querySelector('.posts-list');
+jQuery(function ($) {
+    const ajaxLoadMore = () => {
 
-    if(typeof (button) !== 'undefined' && button !== null) {
-        postsLists.dataset.page = 1;
-        
-        
-        button.addEventListener('click', (e) => {
-            let current_page = jQuery(".posts-list" ).data( "page");
-            let page_max = jQuery(".posts-list" ).data( "max");
+        const templateUrl = '<?= get_bloginfo("template_url"); ?>';
+        const button = document.querySelector('.load-more');
+        let postsLists = document.querySelector('.posts-list');
 
-            let params = new URLSearchParams();
-            params.append('action', 'load_more_posts');
-            params.append('current_page', current_page);
-            
-        
-            axios.post('wp-admin/admin-ajax.php', params)
-                .then(res => {
-                    console.log({res});
-                    
+        if (typeof (button) !== 'undefined' && button !== null) {
+            postsLists.dataset.page = 1;
 
-                    postsLists.innerHTML += res.data.data;
+            button.addEventListener('click', (e) => {
+                let current_page = $(".posts-list").data("page");
+                let page_max = $(".posts-list").data("max");
 
-                    // let getUrl = window.location.href;
-                    //let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+                let params = new URLSearchParams();
 
-                    // window.history.pushState('', '', 'page/' + (parseInt(postsLists.dataset.page) + 1 ));
+                console.log(params)
+                params.append('action', 'load_more_posts');
+                params.append('current_page', current_page);
 
-                    if(current_page == page_max){
-                        button.parentNode.removeChild(button);
-                    }
-                    current_page++;
-                    jQuery(".posts-list" ).data( "page",current_page);
-                }); 
 
-        });
+                axios.post('wp-admin/admin-ajax.php', params)
+                    .then(res => {
+
+                        postsLists.innerHTML += res.data.data;
+
+                        let url = window.location.href;
+                        let getUrl = url.slice(0, -1);
+                        let newUrl = getUrl + '?';
+
+                        console.log({
+                            res
+                        });
+                        console.log(getUrl + '?');
+
+
+
+                        if (current_page == page_max) {
+                            button.parentNode.removeChild(button);
+                        }
+                        current_page++;
+
+                        $(".posts-list").data("page", current_page);
+
+                        window.history.pushState('', document.title, newUrl + 'page=' + current_page);
+                    });
+            });
+        }
     }
-}
 
-ajaxLoadMore();
+    ajaxLoadMore();
+});
