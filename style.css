@@ -5636,6 +5636,12 @@ button,
   background-color: #767676;
   color: #fff; }
 
+.alm-btn-wrap {
+  text-align: center; }
+
+.alm-load-more-btn {
+  margin: 50px 0; }
+
 input[type="submit"],
 input[type="reset"],
 input[type="button"],

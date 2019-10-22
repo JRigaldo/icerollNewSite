@@ -130,29 +130,8 @@
         ?>
     </section>
 
-             <?php echo do_shortcode('[ajax_load_more css_classes="posts" post__not_in="'. $post__not_in .'" post_type="post" pause="true" scroll="false" transition_container="false"]'); ?>
+    <?php echo do_shortcode('[ajax_load_more css_classes="posts" post__not_in="'. $post__not_in .'" post_type="post" pause="true" scroll="false" transition_container="false" [ajax_load_more post_type="post" button_label="Afficher les anciens posts"]]'); ?>
 
-    <!-- Footer -->
-    <footer>
-        <div class="pagination">
-
-            <?php 
-        
-            if(have_posts()):
-                while(have_posts()) : the_post(); ?>
-            <?php endwhile;
-
-            echo paginate_links();
-            
-
-
-            else : echo '<p>No content found</p>';
-
-            endif;
-
-            ?>
-        </div>
-    </footer>
 
 </div>
 
