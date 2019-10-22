@@ -26,35 +26,20 @@
 
     <!-- Featured Page -->
     <article class="post featured">
-        <header class="major">
+        <?php if(have_rows('home_feature', 'option')) : ?>
 
-            <?php
-                $hero = array(
-                    'p' => 38,
-                    'post_type' => 'any',
-                    'post_per_page' => 1
-                );
-            ?>
+        <?php while(have_rows('home_feature', 'option')) : the_row(); ?>
 
-            <?php
-                $queryhero = new WP_Query($hero);
-                if($queryhero->have_posts()) :
-                    while($queryhero->have_posts()) :
-                        $queryhero->the_post(); ?>
+                <header class="major">
+                    <h2><?php the_sub_field('hero_featured_title', 'option'); ?></h2>
+                    <p><?php the_sub_field('home_featured_text_bloc', 'option'); ?></p>
+                </header>
+                <?php $image = get_sub_field('home_featured_image', 'option') ?>
+                <a href="<?php  ?>" class="image fit"><img src="<?php echo $image['url'];?>" alt=""></a>
 
-                    <h2><?php the_title(); ?></h2>
-                    <p><?php the_field('hero_text', 'option'); ?></p>                    
-        </header>
-        <a href="<?php the_permalink(); ?>" class="image main"><?php the_post_thumbnail('banner-image'); ?></a>
-        <ul class="actions special">
-			<li><a href="#" class="button large">Voir l'article</a></li>
-		</ul>
-
-                    <?php endwhile;
-                else : echo '<p>No content found</p>';
-                endif;
-
-            ?>
+        <?php endwhile; ?>
+        <?php else: ?>
+        <?php endif; ?>
     </article>
 
     <?php endif; ?>
