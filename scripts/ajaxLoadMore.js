@@ -25,15 +25,17 @@ jQuery(function ($) {
                         postsLists.innerHTML += res.data.data;
 
                         let url = window.location.href;
-                        let getUrl = url.slice(0, -1);
-                        let newUrl = getUrl + '?';
+                        // let getUrl = url.slice(0, -1);
+                        // let newUrl = getUrl + '?'; 
+                        let newUrl = url;
+                        
+                        window.history.pushState('', document.title, newUrl + 'page=' + current_page);
+                        
 
                         console.log({
                             res
                         });
                         console.log(getUrl + '?');
-
-
 
                         if (current_page == page_max) {
                             button.parentNode.removeChild(button);
@@ -42,7 +44,7 @@ jQuery(function ($) {
 
                         $(".posts-list").data("page", current_page);
 
-                        window.history.pushState('', document.title, newUrl + 'page=' + current_page);
+                        
                     });
             });
         }
