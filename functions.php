@@ -81,15 +81,15 @@ add_action('widgets_init', 'myWidgetsInit');
 
 // in homepage show 4 posts
 
-function homepage_limits( $limits )
-{
-     if(!is_home()) {
-        return  'LIMIT 0, 8';;
-     }
- return $limits;
-}
+// function homepage_limits( $limits )
+// {
+//      if(!is_home()) {
+//         return  'LIMIT 0, 8';;
+//      }
+//  return $limits;
+// }
 
-add_filter('post_limits', 'homepage_limits' );
+// add_filter('post_limits', 'homepage_limits' );
 
 
 

@@ -8,13 +8,20 @@
     max-width: _size(wrapper);
     z-index: 2;
 
-    >* {
+    >section, article {
         @include padding((_size(padding) * 2), (_size(padding) * 2));
         border-top: solid 2px _palette(border);
         margin: 0;
 
         &:first-child {
             border-top: 0;
+        }
+        &:last-child {
+            border-right: solid 2px _palette(border);
+            border-bottom: solid 2px _palette(border);
+        }
+        &:nth-last-child(2) {
+            border-bottom: solid 2px _palette(border);
         }
     }
 
@@ -69,7 +76,7 @@
         }
     }
 
-    >.posts {
+    .posts {
         @include fixed-grid((columns: 2, gutters: (_size(padding) * 4), horizontal-align: center, vertical-align: flex-start, flush: false));
         width: 100%;
         padding: 0;

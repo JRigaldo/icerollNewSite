@@ -6816,12 +6816,17 @@ table.alt tbody tr td {
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2; }
-  #main > * {
+  #main > section, #main article {
     padding: 4rem 4rem 2rem 4rem ;
     border-top: solid 2px #eeeeee;
     margin: 0; }
-    #main > *:first-child {
+    #main > section:first-child, #main article:first-child {
       border-top: 0; }
+    #main > section:last-child, #main article:last-child {
+      border-right: solid 2px #eeeeee;
+      border-bottom: solid 2px #eeeeee; }
+    #main > section:nth-last-child(2), #main article:nth-last-child(2) {
+      border-bottom: solid 2px #eeeeee; }
   #main > footer {
     text-align: center; }
   #main > .post {
@@ -6849,7 +6854,7 @@ table.alt tbody tr td {
           font-size: 2.5rem;
           line-height: 1.2;
           margin: 0 0 1.5rem 0; } }
-  #main > .posts {
+  #main .posts {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -6865,7 +6870,7 @@ table.alt tbody tr td {
     text-align: center;
     width: 100%;
     padding: 0; }
-    #main > .posts > * {
+    #main .posts > * {
       -moz-flex-shrink: 1;
       -webkit-flex-shrink: 1;
       -ms-flex-shrink: 1;
@@ -6874,49 +6879,49 @@ table.alt tbody tr td {
       -webkit-flex-grow: 0;
       -ms-flex-grow: 0;
       flex-grow: 0; }
-    #main > .posts > * {
+    #main .posts > * {
       width: 50%; }
-    #main > .posts > * {
+    #main .posts > * {
       padding: 4rem;
       width: 50%; }
-    #main > .posts > article {
+    #main .posts > article {
       border-color: #eeeeee;
       border-left-width: 2px;
       border-style: solid;
       border-top-width: 2px;
       text-align: center; }
-      #main > .posts > article > :last-child {
+      #main .posts > article > :last-child {
         margin-bottom: 0; }
-      #main > .posts > article:nth-child(2n - 1) {
+      #main .posts > article:nth-child(2n - 1) {
         border-left-width: 0; }
-      #main > .posts > article:nth-child(-n + 2) {
+      #main .posts > article:nth-child(-n + 2) {
         border-top-width: 0; }
-    #main > .posts article.post-aside {
+    #main .posts article.post-aside {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
     @media screen and (max-width: 980px) {
-      #main > .posts > * {
+      #main .posts > * {
         width: 50%; }
-      #main > .posts > * {
+      #main .posts > * {
         padding: 2.5rem;
         width: 50%; } }
     @media screen and (max-width: 736px) {
-      #main > .posts > * {
+      #main .posts > * {
         width: 100%; }
-      #main > .posts > * {
+      #main .posts > * {
         padding: 2rem;
         width: 100%; }
-      #main > .posts > article:nth-child(2n - 1) {
+      #main .posts > article:nth-child(2n - 1) {
         border-left-width: 2px; }
-      #main > .posts > article:nth-child(-n + 2) {
+      #main .posts > article:nth-child(-n + 2) {
         border-top-width: 2px; }
-      #main > .posts > article:nth-child(n) {
+      #main .posts > article:nth-child(n) {
         border-left-width: 0; }
-      #main > .posts > article:nth-child(-n + 1) {
+      #main .posts > article:nth-child(-n + 1) {
         border-top-width: 0; }
-      #main > .posts > article .image {
+      #main .posts > article .image {
         max-width: 25rem;
         margin-left: auto;
         margin-right: auto; } }
