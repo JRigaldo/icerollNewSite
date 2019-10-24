@@ -1,4 +1,4 @@
-<article class="post featured">
+<article class="post">
     <header class="major">
         <span class="date"><?php the_time('j F Y') ?></span>
 
