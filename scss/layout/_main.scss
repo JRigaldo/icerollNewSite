@@ -83,10 +83,16 @@
 
         @include breakpoint('<=large') {
             @include padding((_size(padding) * 3), (_size(padding) * 2));
+            &.featured p {
+                @include padding((_size(padding) * 2), (_size(padding) * 2));
+            }
         }
 
         @include breakpoint('<=small') {
             @include padding((_size(padding) * 2), (_size(padding) * 1));
+            &.featured p {
+                @include padding((_size(padding) * 0.5), (_size(padding) * 1));
+            }
 
             header {
                 &.major {
@@ -135,18 +141,6 @@
             }
         }
 
-        // article.post-aside {
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     align-items: center;
-        // }
-
-        // @include breakpoint('>=xlarge') {
-        //     >article {
-        //         min-height: 755px;
-        //     }
-        // }
         @include breakpoint('<=medium') {
             @include fixed-grid-resize((columns: 2, gutters: (_size(padding) * 2.5), flush: false));
         }
