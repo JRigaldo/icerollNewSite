@@ -18,4 +18,4 @@
     ?>
 </section>
 <!-- Load More Button -->
-<?php echo do_shortcode('[ajax_load_more css_classes="posts" post__not_in="'. $post__not_in .'" post_type="post" pause="true" scroll="false" transition_container="false" [ajax_load_more post_type="post" button_label="Afficher les anciens posts"]]'); ?>
+<?php echo do_shortcode('[ajax_load_more post__not_in="'. $post__not_in .'" post_type="post" pause="true" scroll="false" transition_container="false" [ajax_load_more post_type="post" button_label="Afficher les anciens posts"]]'); ?>

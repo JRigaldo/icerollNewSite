@@ -84,3 +84,36 @@
 			display: none;
 		}
 	}
+
+	@include breakpoint('<=medium'){
+		.post.featured{
+			nav{
+				padding: (_size(element-margin) * 0.75);
+				@include vendor('display', 'flex');
+				@include vendor('flex-grow', '1');
+				@include vendor('flex-shrink', '1');
+				ul{
+					margin: 0;
+				}
+				ul:first-child{
+					@include vendor('display', 'flex');
+					@include vendor('flex-grow', '1');
+					@include vendor('flex-shrink', '1');
+					
+				}
+				ul:last-child{
+					@include vendor('display', 'flex');
+					@include vendor('flex-grow', '0');
+					@include vendor('flex-shrink', '0');
+				}
+			}
+		}	
+	}
+	@include breakpoint('>=large'){
+		.post.featured {
+			nav {
+				display: none;
+			}
+		}
+	}
+	

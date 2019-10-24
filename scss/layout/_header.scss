@@ -36,6 +36,7 @@
 		@include breakpoint('<=small') {
 			.logo img{
 				width: 70%;
+				margin: 0 auto;
 			}
 		}
 	}
