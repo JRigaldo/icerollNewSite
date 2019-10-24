@@ -19,15 +19,15 @@
 
 <!-- Featured Page -->
 <article class="post featured">
-    <?php if(have_rows('home_feature', 'option')) : ?>
+    <?php if(have_rows('home_hero', 'option')) : ?>
 
-    <?php while(have_rows('home_feature', 'option')) : the_row(); ?>
+    <?php while(have_rows('home_hero', 'option')) : the_row(); ?>
 
     <header class="major">
-        <h2><?php the_sub_field('hero_featured_title', 'option'); ?></h2>
-        <p><?php the_sub_field('home_featured_text_bloc', 'option'); ?></p>
+        <h2><?php the_sub_field('home_hero_title', 'option'); ?></h2>
+        <p><?php the_sub_field('home_hero_text', 'option'); ?></p>
     </header>
-    <?php $image = get_sub_field('home_featured_image', 'option') ?>
+    <?php $image = get_sub_field('home_hero_image', 'option') ?>
     <a href="<?php  ?>" class="image fit"><img src="<?php echo $image['url'];?>" alt=""></a>
 
     <?php endwhile; ?>

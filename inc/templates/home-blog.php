@@ -6,7 +6,7 @@
             while(have_posts()) : the_post(); 
             $do_not_duplicate[] = $post->ID;
       
-            get_template_part('content', get_post_format());
+            get_template_part('inc/template-part/content', get_post_format());
 
             endwhile; wp_reset_query(); 
             $post__not_in = ($do_not_duplicate) ? implode(',', $do_not_duplicate) : ''; 
