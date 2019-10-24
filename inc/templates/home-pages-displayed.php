@@ -15,7 +15,7 @@
 
     <a href="<?php echo $link; ?>" class="image fit"><img src="<?php echo $image['url'];?>" alt=""></a>
     <ul class="actions special">
-        <li><a href="<?php echo $link; ?>" class="button">Voir l'article</a></li>
+        <li><a href="<?php echo $link; ?>" class="button"><?php the_sub_field('hero_pages_button', 'option'); ?></a></li>
     </ul>
     </article>
 
