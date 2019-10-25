@@ -6874,7 +6874,6 @@ table.alt tbody tr td {
 
 /* Main */
 #main {
-  background-color: #ffffff;
   position: relative;
   margin: 0 auto;
   width: calc(100% - 4rem);
@@ -6895,9 +6894,14 @@ table.alt tbody tr td {
     #main > section:nth-last-child(2),
     #main article:nth-last-child(2) {
       border-bottom: solid 2px #eeeeee; }
+  #main > aside {
+    padding: 4rem 1rem 2rem 1rem ; }
+    #main > aside h3 {
+      font-size: 3rem; }
   #main > footer {
     text-align: center; }
   #main > .post {
+    background-color: #ffffff;
     padding: 8rem 8rem 6rem 8rem ; }
     #main > .post header.major > .date {
       margin-top: -2rem; }
@@ -6925,6 +6929,8 @@ table.alt tbody tr td {
         display: block;
         width: 100%;
         height: auto; }
+      #main > .post.featured p {
+        padding: 4rem 4rem 2rem 4rem ; }
     @media screen and (max-width: 1280px) {
       #main > .post {
         padding: 6rem 4rem 4rem 4rem ; }
@@ -6944,6 +6950,7 @@ table.alt tbody tr td {
           line-height: 1.2;
           margin: 0 0 1.5rem 0; } }
   #main .posts {
+    background-color: #ffffff;
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -7012,9 +7019,6 @@ table.alt tbody tr td {
   @media screen and (max-width: 980px) {
     #main {
       margin: -6rem auto 0 auto; } }
-  @media screen and (max-width: 736px) {
-    #main > * {
-      padding: 2rem 2rem 0.1rem 2rem ; } }
   @media screen and (max-width: 480px) {
     #main {
       width: 100%; } }

@@ -1,7 +1,7 @@
 /* Main */
 
 #main {
-    background-color: _palette(bg);
+    // background-color: _palette(bg);
     position: relative;
     margin: 0 auto;
     width: calc(100% - #{_size(padding) * 2});
@@ -28,11 +28,19 @@
         }
     }
 
+    >aside{
+        @include padding((_size(padding) * 2), (_size(padding) * 0.5));
+        h3{
+            font-size: 3rem;
+        }
+    }
+
     >footer {
         text-align: center;
     }
 
     >.post {
+        background-color: _palette(bg);
         @include padding((_size(padding) * 4), (_size(padding) * 4));
 
         header {
@@ -77,6 +85,10 @@
                 width: 100%;
                 height: auto;
             }
+
+            p{
+                @include padding((_size(padding) * 2), (_size(padding) * 2));
+            }
         }
 
 
@@ -113,6 +125,7 @@
     }
 
     .posts {
+        background-color: _palette(bg);
         @include fixed-grid((columns: 2, gutters: (_size(padding) * 4), horizontal-align: center, vertical-align: flex-start, flush: false));
         width: 100%;
         padding: 0;
@@ -140,6 +153,14 @@
                 border-top-width: 0;
             }
         }
+
+        // &.pages {
+        //     article{
+        //         &:nth-child(2n + 0){
+        //             background-color: red;
+        //         }
+        //     }
+        // }
 
         @include breakpoint('<=medium') {
             @include fixed-grid-resize((columns: 2, gutters: (_size(padding) * 2.5), flush: false));
@@ -178,11 +199,11 @@
         margin: -6rem auto 0 auto;
     }
 
-    @include breakpoint('<=small') {
-        >* {
-            @include padding((_size(padding) * 1), (_size(padding) * 1));
-        }
-    }
+    // @include breakpoint('<=small') {
+    //     >* {
+    //         @include padding((_size(padding) * 1), (_size(padding) * 1));
+    //     }
+    // }
 
     @include breakpoint('<=xsmall') {
         width: 100%;

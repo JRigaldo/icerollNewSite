@@ -9,6 +9,8 @@
         <!-- Posts Page -->
         <?php require get_template_directory() .'/inc/templates/home-pages-displayed.php'; ?>
      <?php endif; ?>
+     <!-- Aside -->
+     <?php require get_template_directory() .'/inc/templates/home-aside.php'; ?>
 
     <!-- Posts Blog -->
     <?php require get_template_directory() .'/inc/templates/home-blog.php'; ?>

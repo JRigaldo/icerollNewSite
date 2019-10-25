@@ -57,6 +57,10 @@
         </ul>
     </nav>
     <p><?php the_sub_field('home_hero_text', 'option'); ?></p>
+    <?php $link = get_sub_field('home_hero_link', 'option') ?>
+    <ul class="actions special">
+        <li><a href="<?php echo $link; ?>" class="button"><?php the_sub_field('home_hero_button', 'option'); ?></a></li>
+    </ul>
     
     <?php endwhile; ?>
     <?php else: ?>
