@@ -6076,7 +6076,7 @@ a.image {
 .featured .image-hero {
   position: relative;
   overflow: hidden;
-  max-height: 100vh; }
+  height: 100vh; }
 
 /* Actions */
 ul.actions {
@@ -6913,6 +6913,9 @@ table.alt tbody tr td {
     #main > aside h3 {
       text-align: center;
       font-size: 3rem; }
+    @media screen and (max-width: 1280px) {
+      #main > aside h3 {
+        font-size: 2.5rem; } }
   #main > footer {
     text-align: center; }
   #main > .post {
@@ -6947,7 +6950,8 @@ table.alt tbody tr td {
       #main > .post.featured p {
         padding: 4rem 4rem 2rem 4rem ; }
       #main > .post.featured ul.actions {
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        padding: 0rem 2rem 0.1rem 2rem ; }
         #main > .post.featured ul.actions li {
           margin-bottom: 0;
           padding: 2rem 0; }
