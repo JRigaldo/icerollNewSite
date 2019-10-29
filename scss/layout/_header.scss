@@ -27,6 +27,8 @@
 			));
 			@include vendor('pointer-events', 'auto');
 			visibility: visible;
+			position: relative;
+			bottom: -3rem;
 		}
 
 		@include breakpoint('<=medium') {

@@ -4451,6 +4451,9 @@ input, select, textarea {
 .card p {
   color: #212931; }
 
+#ajax-load-more {
+  background-color: #ffffff; }
+
 /* Type */
 html {
   font-size: 16pt; }
@@ -6703,7 +6706,9 @@ table.alt tbody tr td {
     -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
     transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
     pointer-events: auto;
-    visibility: visible; }
+    visibility: visible;
+    position: relative;
+    bottom: -3rem; }
   @media screen and (max-width: 980px) {
     #header {
       padding-bottom: 10rem; } }
@@ -6942,11 +6947,10 @@ table.alt tbody tr td {
       #main > .post.featured p {
         padding: 4rem 4rem 2rem 4rem ; }
       #main > .post.featured ul.actions {
-        margin-bottom: 0;
-        padding: 2rem 2rem 0.1rem 2rem ; }
+        margin-bottom: 0; }
         #main > .post.featured ul.actions li {
           margin-bottom: 0;
-          padding: 0 0 2rem 0; }
+          padding: 2rem 0; }
     @media screen and (max-width: 1280px) {
       #main > .post {
         padding: 6rem 4rem 4rem 4rem ; }

@@ -99,10 +99,10 @@
 
             ul.actions {
                 margin-bottom: 0;
-                @include padding((_size(padding) * 1), (_size(padding) * 1));
+                // @include padding((_size(padding) * 1), (_size(padding) * 1));
                 li {
                     margin-bottom: 0;
-                    padding: 0 0 (_size(element-margin) * 1) 0;
+                    padding: (_size(element-margin) * 1) 0;
                 }
             }
         }
