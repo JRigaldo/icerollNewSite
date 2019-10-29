@@ -7,21 +7,23 @@
 
         <?php $image = get_sub_field('hero_pages_image', 'option') ?>
         <?php $link = get_sub_field('hero_pages_link', 'option') ?>
-        <div class="card">
-            <header>
-                <a href="<?php echo $link; ?>" class="image fit"><img src="<?php echo $image['url'];?>" alt=""></a>
-            </header>
+        <a href="<?php echo $link; ?>">
+            <div class="card">
+                <header>
+                    <img src="<?php echo $image['url'];?>" alt="">
+                </header>
 
-            <div class="card-container">
-                <h2><?php the_sub_field('hero_pages_title', 'option'); ?></h2>
+                <div class="card-container">
+                    <h2><?php the_sub_field('hero_pages_title', 'option'); ?></h2>
 
-                <p><?php the_sub_field('hero_pages_text', 'option'); ?></p>
+                    <p><?php the_sub_field('hero_pages_text', 'option'); ?></p>
 
-                <ul class="actions special">
-                    <li><a href="<?php echo $link; ?>" class="button"><?php the_sub_field('hero_pages_button', 'option'); ?></a></li>
-                </ul>
+                    <ul class="actions special">
+                        <li><span class="button"><?php the_sub_field('hero_pages_button', 'option'); ?></span></li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </a>
         
     </article>
 

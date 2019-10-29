@@ -74,3 +74,9 @@
 		-ms-appearance: none;
 		appearance: none;
 	}
+
+	.card{
+		p{
+            color: _palette(fg)
+        }
+	}

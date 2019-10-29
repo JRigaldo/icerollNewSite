@@ -4448,6 +4448,9 @@ input, select, textarea {
   -ms-appearance: none;
   appearance: none; }
 
+.card p {
+  color: #212931; }
+
 /* Type */
 html {
   font-size: 16pt; }
@@ -7030,16 +7033,22 @@ table.alt tbody tr td {
         margin-left: auto;
         margin-right: auto; } }
   #main .card {
-    background-color: #eeeeee;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 5px; }
     #main .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+      box-shadow: 0 28px 26px 0 rgba(0, 0, 0, 0.2); }
     #main .card header img {
+      cursor: pointer;
       border-radius: 5px 5px 0 0; }
     #main .card .card-container {
       padding: 2px 16px; }
+    #main .card h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 1.5rem 0;
+      text-align: left; }
   @media screen and (max-width: 980px) {
     #main {
       margin: -6rem auto 0 auto; } }
