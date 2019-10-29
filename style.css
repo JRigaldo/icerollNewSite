@@ -6067,6 +6067,11 @@ a.image {
     -ms-transform: scale(1.05);
     transform: scale(1.05); }
 
+.featured .image-hero {
+  position: relative;
+  overflow: hidden;
+  max-height: 100vh; }
+
 /* Actions */
 ul.actions {
   display: -moz-flex;
@@ -6895,8 +6900,10 @@ table.alt tbody tr td {
     #main article:nth-last-child(2) {
       border-bottom: solid 2px #eeeeee; }
   #main > aside {
+    background: rgba(255, 255, 255, 0.45);
     padding: 4rem 1rem 2rem 1rem ; }
     #main > aside h3 {
+      text-align: center;
       font-size: 3rem; }
   #main > footer {
     text-align: center; }
@@ -6917,7 +6924,7 @@ table.alt tbody tr td {
       padding: 10px; }
       #main > .post header.hero h2 {
         text-align: center;
-        padding: 1.5rem 0;
+        padding: 6rem 0 2rem 0;
         margin: 0 !important; }
       #main > .post header.hero > h3 {
         padding: 10px; }
@@ -6931,6 +6938,12 @@ table.alt tbody tr td {
         height: auto; }
       #main > .post.featured p {
         padding: 4rem 4rem 2rem 4rem ; }
+      #main > .post.featured ul.actions {
+        margin-bottom: 0;
+        padding: 2rem 2rem 0.1rem 2rem ; }
+        #main > .post.featured ul.actions li {
+          margin-bottom: 0;
+          padding: 0 0 2rem 0; }
     @media screen and (max-width: 1280px) {
       #main > .post {
         padding: 6rem 4rem 4rem 4rem ; }

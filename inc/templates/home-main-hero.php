@@ -31,7 +31,9 @@
 
         </header>
         <?php $image = get_sub_field('home_hero_image', 'option') ?>
-        <img src="<?php echo $image['url'];?>">
+        <div class="image-hero">
+            <img src="<?php echo $image['url'];?>">
+        </div>
     </a>
     <nav>
         <ul class="icons">
