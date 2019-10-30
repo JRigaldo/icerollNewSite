@@ -15,3 +15,11 @@ img{
     width: 100%;
     height: auto;
 }
+
+p{
+    &:after{
+        display: table;
+        content: '';
+        clear: both;
+    }
+}

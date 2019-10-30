@@ -3,26 +3,26 @@
 <!-- Main -->
 <div id="main">
   <section class="post">
-
-     <?php 
+    <?php 
         
         if(have_posts()):
             while(have_posts()) : the_post(); ?>
 
     <!-- Featured Post -->
-        <header class="major">
-            <h2><?php the_title(); ?></h2>
-        </header>
-        <div class="image main"><?php the_post_thumbnail('banner-image'); ?></div>
-        <p><?php the_content(); ?></p>
+    <header class="major">
+      <h2><?php the_title(); ?></h2>
+    </header>
+    <div class="image main"><?php the_post_thumbnail('banner-image'); ?></div>
+    <p><?php the_content(); ?></p>
+    <?php endwhile;
 
-      <?php endwhile;
+            else : echo '<p>No content found</p>';
 
-        else : echo '<p>No content found</p>';
+        endif; ?>
 
-        endif;
+    <!-- Custom Field Left Right Layout -->
+    <?php require get_template_directory() .'/inc/templates/layout-left-right.php'; ?>
 
-        ?>
   </section>
 
 </div>

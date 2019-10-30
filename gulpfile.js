@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+// const purify = require('gulp-purifycss');
 const browserSync = require('browser-sync').create();
+
 
 //compile scss into css
 function style() {
@@ -14,6 +16,14 @@ function style() {
         .pipe(browserSync.stream());
 }
 
+// function purifyCss() {
+//     return gulp.task('css', function(){
+//         gulp.src('./style.css')
+//         .pipe(purify(['./style.css']))
+//         .pipe(gulp.dest('./dist/'));
+//     });
+// }
+
 function watch() {
 
     browserSync.init({
@@ -26,6 +36,6 @@ function watch() {
     gulp.watch('./js/**/*.js').on('change', browserSync.reload);
 }
 
-
 exports.style = style;
+// exports.purifyCss = purifyCss;
 exports.watch = watch;

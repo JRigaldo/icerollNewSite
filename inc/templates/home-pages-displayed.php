@@ -5,8 +5,8 @@
     <?php while(have_rows('home_pages_displayed', 'option')) : the_row(); ?>
     <article class="post">
 
-        <?php $image = get_sub_field('hero_pages_image', 'option') ?>
-        <?php $link = get_sub_field('hero_pages_link', 'option') ?>
+        <?php $image = get_sub_field('hero_pages_image', 'option'); ?>
+        <?php $link = get_sub_field('hero_pages_link', 'option'); ?>
         <a href="<?php echo $link; ?>">
             <div class="card">
                 <header>
