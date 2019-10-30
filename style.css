@@ -9,7 +9,7 @@ Version: 1.0
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700,700i&display=swap|Oleo+Script+Swash+Caps:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
@@ -4471,7 +4471,7 @@ body {
   color: #212931; }
 
 body, input, select, textarea {
-  font-family: "Montserrat", sans-serif, Georgia, serif;
+  font-family: "Merriweather", Georgia, serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 2.375; }
@@ -4496,10 +4496,10 @@ p {
   margin: 0 0 2rem 0; }
 
 h1, h2 {
-  font-family: "Oleo Script Swash Caps", cursive, Helvetica, sans-serif; }
+  font-family: "Source Sans Pro", Helvetica, sans-serif; }
 
 h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif, Georgia, serif; }
+  font-family: "Merriweather", Georgia, serif; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
@@ -5529,7 +5529,7 @@ button,
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
-  font-family: "Montserrat", sans-serif, Georgia, serif;
+  font-family: "Merriweather", Georgia, serif;
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -5737,7 +5737,7 @@ form {
 
 label {
   display: block;
-  font-family: "Montserrat", sans-serif, Georgia, serif;
+  font-family: "Merriweather", Georgia, serif;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
@@ -5824,7 +5824,7 @@ input[type="radio"] {
     display: inline-block;
     font-size: 1rem;
     letter-spacing: 0;
-    font-family: "Montserrat", sans-serif, Georgia, serif;
+    font-family: "Merriweather", Georgia, serif;
     text-transform: none;
     font-weight: 300;
     padding-left: 2.8rem;
@@ -6312,7 +6312,7 @@ table {
   table td {
     padding: 0.75rem 0.75rem; }
   table th {
-    font-family: "Montserrat", sans-serif, Georgia, serif;
+    font-family: "Merriweather", Georgia, serif;
     font-size: 0.8rem;
     font-weight: 900;
     letter-spacing: 0.075em;
@@ -6380,7 +6380,7 @@ table.alt tbody tr td {
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
     border: solid 2px;
     display: inline-block;
-    font-family: "Montserrat", sans-serif, Georgia, serif;
+    font-family: "Merriweather", Georgia, serif;
     font-size: 0.8rem;
     font-weight: 900;
     height: 3rem;
@@ -6791,7 +6791,7 @@ table.alt tbody tr td {
     -webkit-flex-shrink: 1;
     -ms-flex-shrink: 1;
     flex-shrink: 1;
-    font-family: "Montserrat", sans-serif, Georgia, serif;
+    font-family: "Merriweather", Georgia, serif;
     font-weight: 900;
     letter-spacing: 0.075em;
     list-style: none;
@@ -7350,7 +7350,7 @@ table.alt tbody tr td {
   position: relative;
   color: rgba(33, 41, 49, 0.45);
   cursor: default;
-  font-family: "Montserrat", sans-serif, Georgia, serif;
+  font-family: "Merriweather", Georgia, serif;
   font-size: 0.9rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -7403,7 +7403,7 @@ table.alt tbody tr td {
   right: 0.75rem;
   border: 0;
   color: #1e252d;
-  font-family: "Montserrat", sans-serif, Georgia, serif;
+  font-family: "Merriweather", Georgia, serif;
   font-size: 0.9rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -7470,7 +7470,7 @@ table.alt tbody tr td {
       #navPanel .links li a {
         border-bottom: 0;
         display: block;
-        font-family: "Montserrat", sans-serif, Georgia, serif;
+        font-family: "Merriweather", Georgia, serif;
         font-size: 0.9rem;
         font-size: 0.9rem;
         font-weight: 900;
