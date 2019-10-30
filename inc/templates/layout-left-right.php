@@ -16,6 +16,7 @@
     </span>
     <?php the_sub_field('page_text_left'); ?>
 </p>
+<p><?php the_sub_field('page_text') ?></p>
 <?php endwhile; ?>
 <?php else: ?>
 <?php endif; ?>
