@@ -1,7 +1,7 @@
 				<!-- Footer -->
 				<footer id="footer">
 					<section>
-						<?php the_field('footer_contact', 'option'); ?>
+						<?php echo do_shortcode(get_field('contact', 'option')); ?>
 					</section>
 					<section class="split contact">
 						<section class="alt">

@@ -1,4 +1,18 @@
 // Comments wordpress
+	#main aside{
+	h3.comment-title, h3.comment-reply-title{
+			font-size: 1.3em;
+		}
+		article{
+			border: none!important;
+		}	
+	}
+
+	form .logged-in-as{
+		font-size: 0.75em;
+	}
+	
+
     ol.comment-list{
         padding: 0;
     }
