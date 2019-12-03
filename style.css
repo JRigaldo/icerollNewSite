@@ -5895,6 +5895,12 @@ input[type="radio"] + label:before {
     border-radius: 20px;
     margin: 5px; }
 
+form .comment-form-captcha img {
+  width: 100px; }
+
+.avatar.avatar-45.photo {
+  width: 50px; }
+
 label {
   color: #212931; }
 
@@ -6080,8 +6086,7 @@ a.image {
 
 .featured .image-hero {
   position: relative;
-  overflow: hidden;
-  height: 100vh; }
+  overflow: hidden; }
 
 /* Actions */
 ul.actions {
@@ -7044,19 +7049,26 @@ table.alt tbody tr td {
       #main .posts > article .image {
         max-width: 25rem;
         margin-left: auto;
-        margin-right: auto; } }
+        margin-right: auto; }
+      #main .posts > article .card {
+        min-height: 100%; }
+        #main .posts > article .card .card-container {
+          min-height: 100%; } }
   #main .card {
+    position: relative;
     cursor: pointer;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    border-radius: 5px; }
+    border-radius: 5px;
+    min-height: 450px; }
     #main .card:hover {
       box-shadow: 0 28px 26px 0 rgba(0, 0, 0, 0.2); }
     #main .card header img {
       cursor: pointer;
       border-radius: 5px 5px 0 0; }
     #main .card .card-container {
-      padding: 2px 16px; }
+      padding: 2px 16px;
+      min-height: 450px; }
     #main .card h2 {
       font-size: 2rem;
       line-height: 1.2;

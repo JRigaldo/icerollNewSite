@@ -1,7 +1,7 @@
 				<!-- Footer -->
 				<footer id="footer">
 					<section>
-						<?php the_field('footer_contact') ?>
+						<?php the_field('footer_contact', 'option'); ?>
 					</section>
 					<section class="split contact">
 						<section class="alt">

@@ -312,6 +312,14 @@
 		}
 	}
 
+	form .comment-form-captcha img{
+		width: 100px;
+	}
+
+.avatar.avatar-45.photo{
+	width: 50px;
+	}
+
 	
 
 	@include color-form;
