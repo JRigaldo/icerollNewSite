@@ -7,7 +7,7 @@
         <!-- Main Featured Article -->
         <?php require get_template_directory() .'/inc/templates/home-main-hero.php'; ?>
         <!-- Aside input mail -->
-        <?php require get_template_directory() .'/inc/templates/home-mail.php'; ?>
+        <?php require get_template_directory() .'/inc/templates/home-subscribe.php'; ?>
         <!-- Posts Page -->
         <?php require get_template_directory() .'/inc/templates/home-pages-displayed.php'; ?>
      <?php endif; ?>
