@@ -20,13 +20,11 @@
 						<section>
 							<h3>Social</h3>
 							<ul class="icons alt">
-								<li><a href="https://twitter.com/IcerollLausanne" class="icon brands alt fa-twitter"><span
+								<li><a href="https://twitter.com/IcerollLausanne" target="_blank" class="icon brands alt fa-twitter"><span
 											class="label">Twitter</span></a></li>
-								<li><a href="https://www.facebook.com/iceroll.lausanne.5"
-										class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.instagram.com/icerolldelice/?hl=fr"
-										class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://www.youtube.com" class="icon brands alt fa-youtube"><span
+								<li><a href="https://www.facebook.com/IcerollDelices" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/icerolldelice/?hl=fr" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://www.youtube.com/watch?v=9EMNQNuEY0M&feature=emb_title" target="_blank" class="icon brands alt fa-youtube"><span
 											class="label">Youtube</span></a></li>
 							</ul>
 						</section>

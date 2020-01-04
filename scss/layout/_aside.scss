@@ -1,0 +1,15 @@
+aside{
+background: _palette(accent);
+@include padding((_size(padding) * 2), (_size(padding) * 0.5));
+    h3{
+        text-align: center;
+        font-size: 3rem;
+        color: _palette(white);
+    }
+        
+    @include breakpoint('<=large'){
+        h3{
+            font-size: 2.5rem;
+        }
+    }
+}

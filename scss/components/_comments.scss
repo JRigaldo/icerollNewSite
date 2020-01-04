@@ -66,3 +66,18 @@
 	.comment-notes{
 		line-height: 1.6em;
 	}
+	form.comment-form{
+		p{
+			margin-bottom: 5px;
+		}
+		label{
+			display: inline;
+		}
+		.required{
+			display: inline;
+		}
+		img{
+			width: 150px;
+			display: inline-block;
+		}
+	}

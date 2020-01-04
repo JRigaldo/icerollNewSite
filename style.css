@@ -6010,6 +6010,19 @@ article.comment-body {
 .comment-notes {
   line-height: 1.6em; }
 
+form.comment-form p {
+  margin-bottom: 5px; }
+
+form.comment-form label {
+  display: inline; }
+
+form.comment-form .required {
+  display: inline; }
+
+form.comment-form img {
+  width: 150px;
+  display: inline-block; }
+
 /* Icon */
 .icon {
   text-decoration: none;
@@ -6476,8 +6489,7 @@ table.alt tbody tr td {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #212931;
-    background-image: url("./images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./images/bg.jpg");
+    background-color: #000000;
     background-size: auto,								auto,														100% auto;
     background-position: center,								center,														top center;
     background-repeat: repeat,								no-repeat,													no-repeat;
@@ -6929,15 +6941,6 @@ table.alt tbody tr td {
     #main > section:nth-last-child(2),
     #main article:nth-last-child(2) {
       border-bottom: solid 2px #eeeeee; }
-  #main > aside {
-    background: rgba(255, 255, 255, 0.45);
-    padding: 4rem 1rem 2rem 1rem ; }
-    #main > aside h3 {
-      text-align: center;
-      font-size: 3rem; }
-    @media screen and (max-width: 1280px) {
-      #main > aside h3 {
-        font-size: 2.5rem; } }
   #main > footer {
     text-align: center; }
   #main > .post {
@@ -7373,7 +7376,7 @@ table.alt tbody tr td {
 
 #copyright {
   position: relative;
-  color: rgba(33, 41, 49, 0.45);
+  color: rgba(232, 58, 78, 0.75);
   cursor: default;
   font-family: "Merriweather", Georgia, serif;
   font-size: 0.9rem;
@@ -7427,7 +7430,7 @@ table.alt tbody tr td {
   top: 0.75rem;
   right: 0.75rem;
   border: 0;
-  color: #1e252d;
+  color: #e83a4e;
   font-family: "Merriweather", Georgia, serif;
   font-size: 0.9rem;
   font-weight: 900;
@@ -7561,3 +7564,14 @@ table.alt tbody tr td {
     transform: translateX(0);
     box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
     visibility: visible; } }
+
+aside {
+  background: #e83a4e;
+  padding: 4rem 1rem 2rem 1rem ; }
+  aside h3 {
+    text-align: center;
+    font-size: 3rem;
+    color: #FFFFFF; }
+  @media screen and (max-width: 1280px) {
+    aside h3 {
+      font-size: 2.5rem; } }
