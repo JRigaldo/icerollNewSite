@@ -5,7 +5,7 @@
 					</section>
 					<section class="split contact">
 						<section class="alt">
-							<h3>Address</h3>
+							<h3>Adresse</h3>
 							<p>Jetée de la compagnie <br />
 								1007 Lausanne</p>
 						</section>
