@@ -13,7 +13,6 @@ add_action('wp_enqueue_scripts', 'resources');
 
 
 
-
 function add_this_script_footer(){
     wp_enqueue_script('main', get_stylesheet_directory_uri() . '/scripts/main.js', array('jquery'), 1.0, false);
     // wp_enqueue_script('frontwp', get_template_directory_uri() . '/scripts/frontwp.js', NULL , 1.0, true);

@@ -5,7 +5,7 @@
 
     <?php if(is_home() && !is_paged()) : ?>
         <!-- Main Featured Article -->
-        <?php require get_template_directory() .'/inc/templates/home-main-hero.php'; ?>
+        <?php require get_template_directory() .'/inc/templates/gallery-icecream.php'; ?>
         <!-- Aside -->
         <?php require get_template_directory() .'/inc/templates/home-aside.php'; ?>
         <!-- Posts Page -->

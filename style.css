@@ -6272,6 +6272,9 @@ section.special,
 article.special {
   text-align: center; }
 
+section.gallery-text {
+  background-color: #FFFFFF; }
+
 header {
   cursor: default; }
   header > .date {
