@@ -5544,6 +5544,9 @@ button,
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap; }
   input[type="submit"].icon:before,
   input[type="reset"].icon:before,

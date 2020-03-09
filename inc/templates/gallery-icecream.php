@@ -6,7 +6,7 @@
     <article class="post">
         <?php $image = get_sub_field('picture_icecream', 'option'); ?>
         <h3><?php the_sub_field('title_icecream', 'option'); ?></h3>
-        <img src="<?php echo $image['url'];?>" alt="">
+        <?php echo wp_get_attachment_image($image['id'], 'full'); ?>
     </article>
     <?php endwhile; ?>
     <?php else: ?>
